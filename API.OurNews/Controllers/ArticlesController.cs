@@ -44,5 +44,11 @@ namespace API.OurNews.Controllers
             
             return await Mediator.Send(new Delete.Command { Id = id});
         }
+
+        [HttpGet("frontnews")]
+        public async Task<ActionResult<List<Article>>> GetFrontNews()
+        {
+            return await Mediator.Send(new FrontNews.Query());
+        }
     }
 }

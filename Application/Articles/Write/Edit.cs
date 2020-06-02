@@ -47,13 +47,13 @@ namespace Application.Articles.Write
                     throw new Exception();
                 }
 
-                article.Category = request.Category;
-                article.Content = request.Content;
-                article.Description = request.Description;
-                article.MainContent = request.MainContent;
-                article.Title = request.Title;
-                article.Tags = request.Tags;
-                article.Author = request.Author;
+                article.Category = request.Category ?? article.Category;
+                article.Content = request.Content ?? article.Content;
+                article.Description = request.Description ?? article.Description;
+                article.MainContent = request.MainContent ?? article.MainContent;
+                article.Title = request.Title ?? article.Title;
+                article.Tags = request.Tags ?? article.Tags;
+                article.Author = request.Author ?? article.Author;
 
                 var success = await _context.SaveChangesAsync() > 0;
                 if(success)

@@ -20,6 +20,7 @@ namespace Persistence.InitialData
                     {
                         Author = "Joshua Learn",
                         Category = "Science",
+                        Level = 1,
                         DatePublished = new DateTime(2020, 5, 27),
                         Title = "Fossil Bite Marks Show Some Dinosaurs Ate Their Own",
                         Description = "Prehistoric remains also reveal signs of a particularly large predator.",
@@ -51,6 +52,7 @@ namespace Persistence.InitialData
                     {
                         Author = "Chris Gorski",
                         Category = "Technology",
+                        Level = 1,
                         DatePublished = new DateTime(2020, 3, 3),
                         Title = "A Linguistic Lens on Artificial Intelligence",
                         Description = "A conversation with computational linguist Emily M. Bender about the ways artificial intelligence can go wrong.",
@@ -73,6 +75,7 @@ namespace Persistence.InitialData
                     {
                         Author = "Catherine Meyers",
                         Category = "Physics",
+                        Level = 1,
                         DatePublished = new DateTime(2020, 3, 20),
                         Title = "In Locked Down Spain, a Physicist's Disease Model Research Turns Strikingly Real",
                         Description = "Yamir Moreno studies how human networks spread COVID-19 and other diseases.",
@@ -99,6 +102,7 @@ namespace Persistence.InitialData
                     {
                         Author = "Joe Brennan, The Irish times",
                         Category = "Economy",
+                        Level = 1,
                         DatePublished = new DateTime(2020, 5, 28),
                         Title = "Irish economy to contract by 12%, ESRI forecasts",
                         Description = "Think tank warns against ‘tapering’ Covid-19 payment as businesses gradually restart",

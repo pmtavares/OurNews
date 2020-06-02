@@ -34,6 +34,9 @@ namespace Domain
 
         public string Category { get; set; }
 
+        public short Level { get; set; }
+
+
         [Required]
         [StringLength(80)]
         public string Tags { get; set; }
