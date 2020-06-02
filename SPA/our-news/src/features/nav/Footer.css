@@ -1,0 +1,19 @@
+.topFooter
+{
+    background: "#800f0f" !important;
+    background: linear-gradient(180deg, rgba(251,131,50,1) 0%, rgba(179,25,25,1) 100%) !important;
+    height: "300px";
+    margin-left: "1%";
+    margin-right: "1%";
+    margin-top: "2%";
+    color: #f4f3f3
+    
+}
+.ui.card
+{
+    box-shadow: none;
+    background: transparent !important;
+    color: #f4f3f3 !important
+}
+
+

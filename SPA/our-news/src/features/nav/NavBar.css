@@ -1,0 +1,18 @@
+.ui.secondary.pointing.menu
+{
+    background: rgb(251,131,50) !important;
+    background: linear-gradient(176deg, rgba(251,131,50,1) 50%, rgba(179,25,25,1) 100%) !important;
+    margin-bottom: '200px' !important;
+    margin-bottom: 2%;
+    
+}
+.item
+{
+    color: #f4f3f3 !important;
+    border-bottom-width: 4px !important;
+  
+}
+.ui.secondary.pointing.menu .active.item
+{
+    border-color: #f4f3f3 !important;
+}

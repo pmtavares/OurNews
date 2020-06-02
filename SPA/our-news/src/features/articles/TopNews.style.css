@@ -1,0 +1,25 @@
+.gridColumn{
+    padding-left: 2%; 
+    min-height: "27em";
+}
+
+.card-image:hover
+{
+    opacity: 0.7;
+    transition-duration: 800ms;
+    transition-timing-function: ease-in-out;
+}
+
+.card-image
+{
+    transition-timing-function: ease-in;
+    transition-duration: 500ms;
+    height: 15em;
+    object-fit: cover;
+}
+
+
+
+
+
+

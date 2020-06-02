@@ -1,0 +1,16 @@
+.breaking-news-label
+{
+    background-color: #d54b25 !important;
+    color: aliceblue  !important;
+    height: 40px;
+    padding: 1em 1em !important ;
+    vertical-align: center  !important;
+}
+.breaking-news-data
+{
+    color: #6e6c6b
+}
+.breaking-news-add
+{
+    width: 100% !important;
+}
