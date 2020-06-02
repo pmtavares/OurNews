@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Menu, Segment, Container } from 'semantic-ui-react'
+import { Menu, Container } from 'semantic-ui-react'
 import './NavBar.css'
 
 const NavBar = () => {

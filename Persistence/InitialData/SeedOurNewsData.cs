@@ -120,6 +120,7 @@ namespace Persistence.InitialData
                     {
                         Author = "John Campbell, BBC",
                         Category = "Science",
+                        Level = 3,
                         DatePublished = new DateTime(2020, 5, 27),
                         Title = "Brexit: NI 'could access UK market and EU single market'",
                         Description = "The Brexit Deal could bring advantages to Northern Ireland, giving it access to both the UK market and the EU single market, Edwin Poots has suggested",
@@ -132,8 +133,60 @@ namespace Persistence.InitialData
                         MainPhoto = "image5.jpg",
                         SecundaryPhoto = "image5-sec.jpg",
                         Tags = "Politics, Economy"
+                    },
+                    new Article
+                    {
+                        Author = "Laura Sanders",
+                        Category = "Science",
+                        Level = 3,
+                        DatePublished = new DateTime(2020, 6, 02),
+                        Title = "A new 3-D map illuminates the ‘little brain’ within the heart",
+                        Description = "Nerve cells in the organ are poorly understood",
+                        Content = "The heart has its own “brain.” Now, scientists have drawn a detailed map of this little brain, called the intracardiac nervous system, in rat hearts. The heart’s big boss is the brain, but nerve cells in the heart have a say, too. These neurons are thought to play a crucial role in heart health, helping to fine-tune heart rhythms and perhaps protecting people against certain kinds of heart disease.",
+                        MainContent = "But so far, this local control system hasn’t been mapped in great detail.To make their map, systems biologist James Schwaber at Thomas Jefferson University in Philadelphia and colleagues imaged male and female rat hearts with a method called knife-edge scanning microscopy, creating detailed pictures of heart anatomy. Those images could then be built into a 3-D model of the heart. The scientists " +
+                        "also plucked out individual neurons and measured the amount of gene activity within each cell. These measurements helped sort the heart’s neurons into discrete groups. Most of these neuron clusters dot the top of the heart, where blood vessels come in and out. Some of these clusters spread down the back of the heart, and were particularly abundant on the left side. With this new view of the individual clusters, scientists can begin to study whether these groups have distinct jobs.",
+                        MainPhoto = "./assets/images/news/image7.jpg",
+                        SecundaryPhoto = "",
+                        Tags = "Science, World"
+                    },
+                    new Article
+                    {
+                        Author = "Stephen Collinson, CNN",
+                        Category = "Politics",
+                        Level = 3,
+                        DatePublished = new DateTime(2020, 6, 02),
+                        Title = "Trump responds to protests with a strongman act",
+                        Description = "President Donald Trump's made-for-TV embrace of authoritarianism's imagery and tools at a brittle national moment risks unleashing toxic political forces that threaten America's democratic traditions.",
+                        Content = "Trump on Monday turned security forces on peaceful protesters in front of the White House, as tear gas and rubber bullets flew, before declaring himself the 'law and order' President. Then, in one of the most bizarre moments in modern presidential history.",
+                        MainContent = "It was a moment of vanity and bravado -- orchestrated for the cameras and transparently political -- as Trump struggles to cope with protests sweeping the country after the killing of George Floyd and tries to cover up his botched leadership during the coronavirus pandemic. " +
+                        "Overnight, the White House's official Twitter account released a triumphant video of the moment set to music but omitting any signs of the mayhem unleashed on the protesters.Trump appeared to be trying to project strength at a moment when his presidency seems feckless and as the nation spins " +
+                        "out of control. If it occurred abroad and not in the White House, Americans might perceive a ridiculous self-deluding act of a wanna-be strongman.Trump's showmanship was motivated in part by anger at media coverage saying he had sheltered in a bunker below the White House on Friday night amid protests " +
+                        "in Washington, CNN's Kaitlan Collins and Kevin Liptak reported. It shows how far Trump will go to protect his own thin skin and how his power plays are often motivated by assaults on his dignity. But his behavior is also alarming, considering the vast power at his command, uses of demagogic tropes and " +
+                        "capacity to buckle the traditions and structures of civilian, democratic government. So while Trump's turn to the rhetoric of the despotic leaders he so admires had elements of farce, it opened a sinister new chapter in his presidency and a challenge to American norms.",
+                        MainPhoto = "./assets/images/news/image8.jpg",
+                        SecundaryPhoto = "",
+                        Tags = "Politics, World"
+                    },
+                    new Article
+                    {
+                        Author = "Dominic Rushe",
+                        Category = "Economy",
+                        Level = 2,
+                        DatePublished = new DateTime(2020, 6, 01),
+                        Title = "Coronavirus will haunt US economy for a decade and wipe out $8tn, says CBO",
+                        Description = "Unemployment is soaring to levels unseen since the 1930s Great Depression as Congress debates another $3tn aid package",
+                        Content = "The ongoing coronavirus pandemic will haunt the US economy for a decade, wiping close to $8tn off economic growth, according to new projections released by the Congressional Budget Office (CBO) on Monday.",
+                        MainContent = "In a letter to lawmakers CBO director Phillip Swagel projected the virus will reduce US economic output by 3% through 2030, a loss of $7.9tn. “Business closures and social distancing measures are expected to curtail consumer spending, while the recent drop in energy prices is projected to severely " +
+                        "reduce US investment in the energy sector,” Swagel wrote in response to an inquiry from Senator Chuck Schumer. “Recent legislation will, in CBO’s assessment, partially mitigate the deterioration in economic conditions.” Since the pandemic hit the US trillions of dollars have been poured into the economy " +
+                        "via government stimulus programs and actions by the Federal Reserve. But the moves have not stopped unemployment soaring to levels unseen since the 1930s Great Depression.So far some 40 million Americans have lost their jobs and on Friday the labor department is expected to announce the unemployment rate " +
+                        "reached 20 % in May, up from 14.7 % in April and just 4.4 % in March. Congress is currently debating another $3tn aid package and the renewal of several federal aid programs that are set to expire, including a temporary boost to unemployment benefits that will lapse at the end of July. Republicans have balked " +
+                        "at the size of the new stimulus program.Schumer seized on the CBO release to press for action. “In order to avoid the risk of another Great Depression, the Senate must act with a fierce sense of urgency to make sure that everyone in America has the income they need to feed their families and put a roof over their heads,” " +
+                        "said Schumer in a statement. “The American people cannot afford to wait another month for the Senate to pass legislation.They need our help now.” ", 
+                        MainPhoto = "./assets/images/news/image10.jpg",
+                        SecundaryPhoto = "",
+                        Tags = "Economy, Covid"
                     }
-                   
+
                 };
 
                 context.Articles.AddRange(news);

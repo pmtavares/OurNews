@@ -1,7 +1,3 @@
-.gridColumn{
-    padding-left: 2%; 
-    min-height: "27em";
-}
 
 .card-image:hover
 {
@@ -17,7 +13,6 @@
     height: 15em;
     object-fit: cover;
 }
-
 
 
 

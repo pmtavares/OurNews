@@ -37,7 +37,7 @@
 * Axios: npm install axios@0.19.1
 * Semantic UI: npm install semantic-ui-react@0.88.2
 * Carousel: npm i semantic-ui-carousel-react@1.1.1
-
+* Moment: npm install moment@2.26.0
 
 ## NOT YET
 

@@ -1,19 +1,22 @@
-﻿using MediatR;
-using Domain;
+﻿using Domain;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+using Persistence;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Persistence;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace Application.Articles.Read
 {
-    public class ListLatest
+    public class ListByCategory
     {
-        public class Query: IRequest<List<Article>>
+        public class Query : IRequest<List<Article>>
         {
-
+            public string Category;
+            public int Total;
         }
 
         public class Handler : IRequestHandler<Query, List<Article>>
@@ -29,8 +32,8 @@ namespace Application.Articles.Read
             public async Task<List<Article>> Handle(Query request, CancellationToken cancellationToken)
             {
                 var articles = await _context.Articles
-                    .Where(x => x.Level != 1)
-                    .OrderByDescending(x=> x.DatePublished).Take(3).ToListAsync();
+                    .Where(x => x.Category == request.Category)
+                    .OrderByDescending(x => x.DatePublished).Take(request.Total).ToListAsync();
                 return articles;
             }
         }

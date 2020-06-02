@@ -10,6 +10,6 @@ export interface IArticle
     mainSecondaryPhoto: string,
     category: string,
     tags: string,
-    datepublished: Date
+    datePublished: Date
 
 }

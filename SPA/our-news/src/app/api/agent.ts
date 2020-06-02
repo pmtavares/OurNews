@@ -21,7 +21,9 @@ const Articles = {
     create: (article: IArticle) => requests.post("/articles/", article),
     update: (article: IArticle) => requests.put(`/articles/${article.id}`, article),
     delete: (id: string) => requests.del(`/articles/${id}`),
-    frontArticles: () => requests.get("/articles/frontnews")
+    frontArticles: () => requests.get("/articles/frontnews"),
+    listByCategory: (category: string, total: number) => requests.get(`/articles/${category}/${total}`),
+    
 }
 
 export default 

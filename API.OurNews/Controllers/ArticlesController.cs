@@ -50,5 +50,13 @@ namespace API.OurNews.Controllers
         {
             return await Mediator.Send(new FrontNews.Query());
         }
+
+       
+   
+        [HttpGet("{category}/{total}")]
+        public async Task<ActionResult<List<Article>>> ListbyCategory(string category, int total)
+        {
+            return await Mediator.Send(new ListByCategory.Query { Category = category, Total = total});
+        }
     }
 }

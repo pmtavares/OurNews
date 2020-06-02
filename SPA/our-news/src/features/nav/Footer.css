@@ -16,4 +16,10 @@
     color: #f4f3f3 !important
 }
 
+.ui.list>a.item i.icon, .ui.list>.item .header, .ui.card>.content>.header,
+.ui.feed>.event>.content .summary
+{
+    color: #f4f3f3
+}
+
 

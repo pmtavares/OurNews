@@ -1,68 +1,50 @@
-import React from 'react'
-import { Grid, Image, Segment, Card, Icon, Header, Container } from 'semantic-ui-react'
+import React, {useEffect, useState} from 'react'
+import { Grid, Image, Card, Icon } from 'semantic-ui-react'
 import  './TopNews.style.css';
+import { IArticle } from '../../app/models/article';
+import agent from '../../app/api/agent';
+import moment from 'moment'
 
 const TopNews = () => {
+    const [articles, setArticles] = useState<IArticle[]>([]);
+    useEffect(() => {
+  
+        agent.Articles.listLatest().then(response => {
+          setArticles(response)
+        });
+    
+        return () => {
+          
+        }
+      }, [])
     return (
         <Grid>
             <Grid.Row columns={3}>
-                <Grid.Column >                 
-                    <Card  style={{width: "100%", overflowWrap: 'break-word'}}>
-                            <Image src='assets/images/news/image5.jpg'  ui={false} 
-                            className="card-image" href="#"/>
-                            <Card.Content>
-                            <Card.Header>Matthewrleprleprpelrpelrperleprleprleprleplreprleprleprlep</Card.Header>
-                            <Card.Description>
-                                Matthew is a musician living in Nashville.
-                            </Card.Description>
-                            </Card.Content>
-                            <Card.Content extra>
-                                <Icon name='user' />Username                  
-                                <Icon name='clock' style={{marginLeft: "10%"}}/>
-                                30/05/2020
-                        
-                            </Card.Content>
-                    </Card>                                  
-                </Grid.Column>
-                <Grid.Column >
-                    <Card style={{width: "100%", overflowWrap: 'break-word'}}>                        
-                            <Image src='assets/images/news/image5.jpg' ui={false} 
-                            className="card-image" href="#"/>                            
-                            <Card.Content>
-                            <Card.Header>Matthewrleprleprpelrpelrperleprleprleprleplreprleprleprlep</Card.Header>
-                            <Card.Description>
-                                Matthew is a musician living in Nashville.
-                            </Card.Description>
-                            </Card.Content>
-                            <Card.Content extra>
-                                <Icon name='user' />Username                  
-                                <Icon name='clock' style={{marginLeft: "10%"}}/>
-                                30/05/2020
-                        
-                            </Card.Content>
-                    </Card>
-                </Grid.Column>
-                <Grid.Column className="gridColumn">      
-                    <Card  style={{width: "100%", overflowWrap: 'break-word'}}>
-                        <Image src='assets/images/news/image5.jpg' href="#" 
-                            ui={false} className="card-image"
-                         
-                            />
-                        <Card.Content>
-                        <Card.Header>Matthewrleprleprpelrpelrperleprleprleprleplreprleprleprlep</Card.Header>
-                        <Card.Description>
-                            Matthew is a musician living in Nashville.
-                        </Card.Description>
-                        </Card.Content>
-                        <Card.Content extra>
-                            <Icon name='user' />Username                  
-                            <Icon name='clock' style={{marginLeft: "10%"}}/>
-                            30/05/2020
-                    
-                        </Card.Content>
-                    </Card>
-               
-                </Grid.Column>
+                {
+                    articles.length > 0 &&
+                    articles.map((data) => (
+                        <Grid.Column key={data.id}>                 
+                        <Card style={{width: "100%", overflowWrap: 'break-word'}}>
+                                <Image src={data.mainPhoto} className="card-image" href="#" fluid/>
+                                <Card.Content>
+                                <Card.Header style={{color: "#4a4949"}}>
+                                    {data.title}
+                                </Card.Header>
+                                <Card.Description style={{minHeight: "5.5em"}}>
+                                    {data.description}
+                                </Card.Description>
+                                </Card.Content>
+                                <Card.Content extra>
+                                    <Icon name='user' />{data.author}                  
+                                    <Icon name='clock' style={{marginLeft: "10%"}}/>
+                                    {moment(data.datePublished).format("DD MMM YYYY")}
+                                    
+                                </Card.Content>
+                        </Card>                                  
+                    </Grid.Column>
+
+                    ))
+                }
             </Grid.Row>
       </Grid>
     )

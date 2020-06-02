@@ -1,5 +1,5 @@
 import React, {Fragment, useState, useEffect} from 'react'
-import {Grid, Segment, Image, Header,Item, Container} from 'semantic-ui-react';
+import {Grid, Segment, Image, Header,Item} from 'semantic-ui-react';
 import { IArticle } from '../../app/models/article';
 import agent from '../../app/api/agent';
 import styles from './FrontArticles.style';
@@ -13,7 +13,6 @@ const FrontArticles = () => {
   
         agent.Articles.frontArticles().then(response => {
           setArticles(response)
-          console.log(response)
         });
     
         return () => {
