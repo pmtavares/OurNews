@@ -6,8 +6,9 @@ import BreakingNews from '../articles/BreakingNews';
 import FrontArticles from '../articles/FrontArticles';
 import TopNews from '../articles/TopNews';
 import SecondaryArticles from '../articles/SecondaryArticles';
-import ArticleByCategory from '../articles/ArticleByCategory';
+import ScienceArticles from '../articles/ScienceArticles';
 import Footer from '../nav/Footer';
+import TechnologyArticles from '../articles/TechnologyArticles';
 
 
 const HomePage = () => {
@@ -37,7 +38,17 @@ const HomePage = () => {
                     </Grid.Row>
                     <Grid.Row>
                         <Grid.Column width={11}>
-                            <ArticleByCategory />
+                            <ScienceArticles />
+                        </Grid.Column>
+                        <Grid.Column width={5}>
+                            <Segment>
+                                <Advertisement unit='medium rectangle' test='Medium Rectangle' />
+                            </Segment>
+                        </Grid.Column>
+                    </Grid.Row>
+                    <Grid.Row>
+                        <Grid.Column width={11}>
+                            <TechnologyArticles />
                         </Grid.Column>
                         <Grid.Column width={5}>
                             <Segment>

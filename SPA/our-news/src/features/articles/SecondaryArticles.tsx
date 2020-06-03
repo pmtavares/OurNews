@@ -9,9 +9,8 @@ const SecondaryArticles = () => {
 
     useEffect(() => {
   
-        agent.Articles.listLatest().then(response => {
+        agent.Articles.listSecondaryLatest().then(response => {
           setArticles(response)
-          console.log(response)
         });
     
         return () => {

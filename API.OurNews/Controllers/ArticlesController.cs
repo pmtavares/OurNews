@@ -18,6 +18,12 @@ namespace API.OurNews.Controllers
             return await Mediator.Send(new ListLatest.Query());
         }
 
+        [HttpGet("thirdlatest")]
+        public async Task<ActionResult<List<Article>>> ListLatestArticlesThirdLevel()
+        {
+            return await Mediator.Send(new ListLatestThirdLevel.Query());
+        }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Article>> Details(Guid id)
         {

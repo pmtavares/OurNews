@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { Grid, Image, Card, Icon } from 'semantic-ui-react'
+import { Grid, Image, Card, Icon, Container } from 'semantic-ui-react'
 import  './TopNews.style.css';
 import { IArticle } from '../../app/models/article';
 import agent from '../../app/api/agent';
@@ -24,23 +24,25 @@ const TopNews = () => {
                     articles.length > 0 &&
                     articles.map((data) => (
                         <Grid.Column key={data.id}>                 
-                        <Card style={{width: "100%", overflowWrap: 'break-word'}}>
-                                <Image src={data.mainPhoto} className="card-image" href="#" fluid/>
-                                <Card.Content>
-                                <Card.Header style={{color: "#4a4949"}}>
-                                    {data.title}
-                                </Card.Header>
-                                <Card.Description style={{minHeight: "5.5em"}}>
-                                    {data.description}
-                                </Card.Description>
-                                </Card.Content>
-                                <Card.Content extra>
-                                    <Icon name='user' />{data.author}                  
-                                    <Icon name='clock' style={{marginLeft: "10%"}}/>
-                                    {moment(data.datePublished).format("DD MMM YYYY")}
-                                    
-                                </Card.Content>
-                        </Card>                                  
+                            <Card style={{width: "100%", overflowWrap: 'break-word'}}>
+                                    <Container style={{height: "13em", overflow: "hidden"}}>
+                                        <Image src={data.mainPhoto} className="card-image" href="#" fluid/>                                   
+                                    </Container>
+                                    <Card.Content>
+                                    <Card.Header style={{color: "#4a4949"}}>
+                                        {data.title}
+                                    </Card.Header>
+                                    <Card.Description style={{minHeight: "5.5em"}}>
+                                        {data.description}
+                                    </Card.Description>
+                                    </Card.Content>
+                                    <Card.Content extra>
+                                        <Icon name='user' />{data.author}                  
+                                        <Icon name='clock' style={{marginLeft: "10%"}}/>
+                                        {moment(data.datePublished).format("DD MMM YYYY")}
+                                        
+                                    </Card.Content>
+                            </Card>                                  
                     </Grid.Column>
 
                     ))

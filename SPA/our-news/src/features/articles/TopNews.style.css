@@ -10,8 +10,6 @@
 {
     transition-timing-function: ease-in;
     transition-duration: 500ms;
-    height: 15em;
-    object-fit: cover;
 }
 
 

@@ -17,6 +17,7 @@ const requests = {
 
 const Articles = {
     listLatest: ()=>  requests.get("/articles/latest"),
+    listSecondaryLatest: ()=>  requests.get("/articles/thirdlatest"),
     details: (id: string) => requests.get(`/articles/${id}`),
     create: (article: IArticle) => requests.post("/articles/", article),
     update: (article: IArticle) => requests.put(`/articles/${article.id}`, article),

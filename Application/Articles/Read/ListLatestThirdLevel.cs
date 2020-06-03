@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace Application.Articles.Read
 {
-    public class ListLatest
+    public class ListLatestThirdLevel
     {
         public class Query: IRequest<List<Article>>
         {
@@ -29,7 +29,7 @@ namespace Application.Articles.Read
             public async Task<List<Article>> Handle(Query request, CancellationToken cancellationToken)
             {
                 var articles = await _context.Articles
-                    .Where(x => x.Level == 2)
+                    .Where(x => x.Level == 3)
                     .OrderByDescending(x=> x.DatePublished).Take(3).ToListAsync();
                 return articles;
             }

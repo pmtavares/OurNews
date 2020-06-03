@@ -4,7 +4,7 @@ import agent from '../../app/api/agent'
 import { IArticle } from '../../app/models/article';
 import moment from 'moment'
 
-const ArticleByCategory = () => {
+const ScienceArticles = () => {
     const [articlesScience, setArticlesScience] = useState<IArticle[]>([]);
     const [scienceLatest, setScienceLatest] = useState<IArticle>();
 
@@ -54,7 +54,7 @@ const ArticleByCategory = () => {
                                 {scienceLatest.description}
                             </Card.Description>     
                             <Card.Meta>
-                                <Button basic color='red' style={{marginTop: "1em"}}>
+                                <Button color='orange' style={{marginTop: "1em"}}>
                                     Read more
                                 </Button>
                             </Card.Meta>               
@@ -90,4 +90,4 @@ const ArticleByCategory = () => {
     )
 }
 
-export default ArticleByCategory
+export default ScienceArticles

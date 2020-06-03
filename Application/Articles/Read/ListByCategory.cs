@@ -32,7 +32,7 @@ namespace Application.Articles.Read
             public async Task<List<Article>> Handle(Query request, CancellationToken cancellationToken)
             {
                 var articles = await _context.Articles
-                    .Where(x => x.Category == request.Category)
+                    .Where(x => x.Category == request.Category && x.Level == 0)
                     .OrderByDescending(x => x.DatePublished).Take(request.Total).ToListAsync();
                 return articles;
             }
